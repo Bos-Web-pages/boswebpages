@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UWebsite Template</title>
+    <style>
+* {
+--bozwhite: #BFDAF9;
+--bozdarkblue: #242533; 
+--bozlightblue: #43CBFF;
+--bozgreen: #62D76B;
+--bozblack: #191919;
+--bozgum: #ff66ff;
+--bozmagenta: #47233b;  
+    
+    
+        }
+    body{
+    background-color: var(--bozblack);
+        color: var(--bozwhite);
+        font-family: "Courier New";
+       box-sizing: border-box;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    position: absolute;
+shape-outside: border-box 0;
+    width: 100%;
+  background-color: var(--bozmagenta);
+}
+
+/* Style the topnav links */
+.topnav a {
+
+  display: inline-block;
+  color: var(--bozlightblue);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: var(--bozdarkblue);
+  color: var(--bozlightblgreen);
+}
+
+/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+      color: var(--bozgreen);
+  
+}
+
+#load-image{
+animation-timing-function: ease-in .5;
+  -webkit-appearance: none;
+  appearance: none;
+  display: static;
+  padding: 8px 16px;
+  font-size: 2rem;
+  background: #bbb;
+  color: #333;
+
+}
+
+.image-container{
+    width: 100%;
+    position: sticky;
+       background: url("/462F8EDE-F7E3-4287-98AE-02E617FF6636_1_201_a.jpeg");
+    z-index: 1;
+    opacity: 80%;
+
+}
+        .bgkpic{
+position: absolute;
+            float: right;
+            clear:left;
+            z-index: 2;
+            display: inline-block;
+            animation: ease-in;
+            
+        }
+        .top{
+            display: inline;
+            width: auto;
+        }
+        .row{
+            display: inline-block;
+            align-content: stretch;
+            background-color: inherit;
+        }
+        .bozcol{
+            width: 50%;
+            position: absolute;
+            right:20px;
+            
+        }
+    </style>
+    </head>
+<body>
+<header>
+        <div class="topnav">
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+    </div>
+</header>
+    <div class="row">
+      <div class="bozcol">
+    <div class="bgkpic">       <h1>Develop Web Designers</h1>
+    <div class="top">
+      <h1>Develop Web Designers</h1>
+</div>
+    </div>
+</div>
+<section>
+
+    <div class="boz1">
+        <h2>Front End Web Development</h2>
+        <p>Whether you want to be a web developer, web designer, or software developer, the first languages you want to learn are HTML/HTML5 and CSS/CSS3. Today there are plenty cof Content Management Systems(CMS) which allow you to design you're own website without writing any code. However if you are expecting to take your career further even as a web designer or UI designer then a basic understanding of how a website is set up is a significant skill to have.</p>
+        <p>
+        </p>
+        
+</div></section>
+      <script>
+   document.addEventListener("DOMContentLoaded", function() {
+  var loadButton = document.getElementById("load-image");
+  var imageContainer = document.getElementById("image-container");
+  var newImage = new Image();
+  newImage.src = "/462F8EDE-F7E3-4287-98AE-02E617FF6636_1_201_a.jpeg";
+
+  loadButton.addEventListener("click", function() {
+    if ("decode" in newImage) {
+      newImage.decode().then(function() {
+        imageContainer.appendChild(newImage);
+      });
+    } else {
+      imageContainer.appendChild(newImage);
+    }
+  }, {
+    once: true
+  });
+});</script> 
+</body>
+</html>
